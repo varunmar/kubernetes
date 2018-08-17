@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: grpc-client
+spec:
+  containers:
+  - name: grpc-client
+    command: ["sh", "-c"]
+    args: ["while true ; do sleep 5 ; done"]
+    image: gcr.io/gke-directpath-staging/grpc-client:0.1
+    imagePullPolicy: Always
