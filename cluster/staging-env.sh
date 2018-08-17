@@ -1,0 +1,16 @@
+export KUBE_GCE_API_ENDPOINT=https://www.googleapis.com/compute/cm_staging_v1/
+export KUBE_GCE_ZONE=us-central1-jz1
+export REGION=us-central1
+export GCI_VERSION="cos-direct-path"
+export KUBE_GCI_VERSION="cos-direct-path"
+export KUBE_GCE_MASTER_PROJECT=gke-directpath-staging
+export KUBE_GCE_NODE_PROJECT=gke-directpath-staging
+export KUBE_GCE_ENABLE_IP_ALIASES=true
+export KUBE_UP_AUTOMATIC_CLEANUP=true
+export KUBE_CLUSTER_INITIALIZATION_TIMEOUT=3600
+export MASTER_DISK_SIZE=250GB
+export NODE_DISK_SIZE=250GB
+#export KUBE_CUSTOM_NETD_YAML=$(curl -s https://raw.githubusercontent.com/GoogleCloudPlatform/netd/master/netd.yaml | sed -e 's/^/ /')
+export KUBE_ENABLE_NETD=true
+export NUM_NODES=1
+export SUBNETWORK=subnet1
