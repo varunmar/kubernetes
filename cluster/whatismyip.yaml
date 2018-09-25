@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whatismyip-deployment
+  labels:
+    app: whatismyip
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whatismyip
+  template:
+    metadata:
+      labels:
+        app: whatismyip
+    spec:
+      containers:
+      - name: whatismyip
+        image: us.gcr.io/varunmar-k8s-dev/whatismyip:latest
+        ports:
+        - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: whatismyip-service
+spec:
+  selector:
+    app: whatismyip
+  ports:
+  - protocol: TCP
+    port: 80
+  type: LoadBalancer
