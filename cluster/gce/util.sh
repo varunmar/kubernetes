@@ -2262,6 +2262,11 @@ function create-subnetworks() {
        exit 1;;
   esac
 
+  if [[ -n ${SUBNETWORK:-} ]]; then
+    IP_ALIAS_SUBNETWORK=${SUBNETWORK}
+    echo "IP aliases use an existing subnet: ${SUBNETWORK}"
+  fi
+
   # Look for the alias subnet, it must exist and have a secondary
   # range configured.
   local subnet=$(gcloud compute networks subnets describe \

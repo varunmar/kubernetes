@@ -516,6 +516,16 @@ func (f *Framework) CheckFileSizeViaContainer(podName, containerName, path strin
 	return string(stdout), err
 }
 
+func (f *Framework) RunCommandViaContainer(podName, containerName, cmd string) (string, error) {
+	By("Running a command in the container")
+
+	stdout, stderr, err := kubectlExecWithRetry(f.Namespace.Name, podName, containerName, "--", cmd)
+	if err != nil {
+		Logf("error running kubectl exec %v: %v\nstdout=%v\nstderr=%v)", cmd, err, string(stdout), string(stderr))
+	}
+	return string(stdout), err
+}
+
 // CreateServiceForSimpleAppWithPods is a convenience wrapper to create a service and its matching pods all at once.
 func (f *Framework) CreateServiceForSimpleAppWithPods(contPort int, svcPort int, appName string, podSpec func(n v1.Node) v1.PodSpec, count int, block bool) (*v1.Service, error) {
 	var err error

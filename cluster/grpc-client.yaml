@@ -1,8 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: grpc-client
+  name: grpc-client-nohost
 spec:
+  hostNetwork: false
   containers:
   - name: grpc-client
     command: ["sh", "-c"]
