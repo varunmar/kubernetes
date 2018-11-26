@@ -8,5 +8,5 @@ spec:
   - name: grpc-client
     command: ["sh", "-c"]
     args: ["while true ; do sleep 5 ; done"]
-    image: gcr.io/gke-directpath-staging/grpc-client:0.1
+    image: gcr.io/grpc-testing/grpc_interop_go1.8:v1.16.0
     imagePullPolicy: Always
