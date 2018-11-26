@@ -3038,6 +3038,7 @@ function create-nodes-template() {
   local scope_flags
   scope_flags=$(get-scope-flags)
 
+  echo "Scopes used= ${scope_flags} ### ${scope_flags[*]}"
   write-linux-node-env
   write-windows-node-env
 
