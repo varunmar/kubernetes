@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+spec:
+  backend:
+    # This assumes http-svc exists and routes to healthy endpoints.
+    serviceName: ingress-service-1
+    servicePort: 80
