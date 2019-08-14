@@ -31,7 +31,7 @@ import (
 	"sync"
 	"time"
 
-	"k8s.io/api/core/v1"
+	v1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
@@ -516,12 +516,13 @@ func (f *Framework) CheckFileSizeViaContainer(podName, containerName, path strin
 	return string(stdout), err
 }
 
+// RunCommandViaContainer Yeah, run command do whatever
 func (f *Framework) RunCommandViaContainer(podName, containerName, cmd string) (string, error) {
-	By("Running a command in the container")
+	ginkgo.By("Running a command in the container")
 
 	stdout, stderr, err := kubectlExecWithRetry(f.Namespace.Name, podName, containerName, "--", cmd)
 	if err != nil {
-		Logf("error running kubectl exec %v: %v\nstdout=%v\nstderr=%v)", cmd, err, string(stdout), string(stderr))
+		e2elog.Logf("error running kubectl exec %v: %v\nstdout=%v\nstderr=%v)", cmd, err, string(stdout), string(stderr))
 	}
 	return string(stdout), err
 }
