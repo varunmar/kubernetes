@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    scheduler.alpha.kubernetes.io/critical-pod: ""
+  labels:
+    component: kube-proxy
+    tier: node
+  name: kube-proxy-kubernetes-minion-group-0mh2
+  namespace: kube-system
+  resourceVersion: "577"
+spec:
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - exec kube-proxy --master=https://35.194.24.43 --kubeconfig=/var/lib/kube-proxy/kubeconfig
+      --cluster-cidr=10.64.0.0/14 --resource-container="" --oom-score-adj=-998 --v=3
+      --feature-gates=ExperimentalCriticalPodAnnotation=true --iptables-sync-period=1m
+      --iptables-min-sync-period=10s --ipvs-sync-period=1m --ipvs-min-sync-period=10s
+      1>>/var/log/kube-proxy.log 2>&1
+    env:
+    - name: KUBE_CACHE_MUTATION_DETECTOR
+      value: "false"
+    image: k8s.gcr.io/kube-proxy:v1.15.2
+    imagePullPolicy: IfNotPresent
+    name: kube-proxy
+    resources:
+      requests:
+        cpu: 100m
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/ssl/certs
+      name: etc-ssl-certs
+      readOnly: true
+    - mountPath: /usr/share/ca-certificates
+      name: usr-ca-certs
+      readOnly: true
+    - mountPath: /var/log
+      name: varlog
+    - mountPath: /var/lib/kube-proxy/kubeconfig
+      name: kubeconfig
+    - mountPath: /run/xtables.lock
+      name: iptableslock
+    - mountPath: /lib/modules
+      name: lib-modules
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: kubernetes-minion-group-0mh2
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    operator: Exists
+  - effect: NoSchedule
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /usr/share/ca-certificates
+      type: ""
+    name: usr-ca-certs
+  - hostPath:
+      path: /etc/ssl/certs
+      type: ""
+    name: etc-ssl-certs
+  - hostPath:
+      path: /var/lib/kube-proxy/kubeconfig
+      type: FileOrCreate
+    name: kubeconfig
+  - hostPath:
+      path: /var/log
+      type: ""
+    name: varlog
+  - hostPath:
+      path: /run/xtables.lock
+      type: FileOrCreate
+    name: iptableslock
+  - hostPath:
+      path: /lib/modules
+      type: ""
+    name: lib-modules
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: 2019-08-08T01:51:24Z
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: 2019-08-08T01:51:25Z
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: 2019-08-08T01:51:25Z
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: 2019-08-08T01:51:24Z
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://fb31d51fbb4c0f4ff8b9e2892b8cb7fecbeae60f9f5d8d7e752e29cfb15c760a
+    image: k8s.gcr.io/kube-proxy:v1.15.2
+    imageID: docker://sha256:167bbf6c93388fa471649c599f4b191083dc2ae062bfab3d18f13a433d7eb583
+    lastState: {}
+    name: kube-proxy
+    ready: true
+    restartCount: 0
+    state:
+      running:
+        startedAt: 2019-08-08T01:51:25Z
+  hostIP: 10.40.0.28
+  phase: Running
+  podIP: 10.40.0.28
+  qosClass: Burstable
+  startTime: 2019-08-08T01:51:24Z

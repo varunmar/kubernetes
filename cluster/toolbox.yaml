@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: toolbox
+spec:
+  containers:
+  - name: toolbox
+    command: ["sh", "-c"]
+    args: ["while true ; do sleep 5 ; done"]
+    image: gcr.io/google-containers/toolbox
+    imagePullPolicy: Always
