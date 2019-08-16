@@ -1,6 +1,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  name: grpc-client-host
+spec:
+  hostNetwork: true
+  containers:
+  - name: grpc-client
+    command: ["sh", "-c"]
+    args: ["while true ; do sleep 5 ; done"]
+    image: gcr.io/directpath-test-images/grpc_interop_go1.11:v1.21.0
+    imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Pod
+metadata:
   name: grpc-client-nohost
 spec:
   hostNetwork: false
@@ -8,5 +21,5 @@ spec:
   - name: grpc-client
     command: ["sh", "-c"]
     args: ["while true ; do sleep 5 ; done"]
-    image: gcr.io/grpc-testing/grpc_interop_go1.8:v1.16.0
+    image: gcr.io/directpath-test-images/grpc_interop_go1.11:v1.21.0
     imagePullPolicy: Always

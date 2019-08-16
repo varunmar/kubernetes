@@ -1,0 +1,125 @@
+Load=1000 at 03:43:01
+service/load-1000-pods created
+endpoints/load-1000-pods created
+Creating service 1000 at 03:43:05
+service/service-1000-pods created
+service "service-1000-pods" deleted
+Creating service 2000 at 03:43:31
+service/service-2000-pods created
+service "service-2000-pods" deleted
+Creating service 3000 at 03:43:58
+service/service-3000-pods created
+service "service-3000-pods" deleted
+Creating service 4000 at 03:44:22
+service/service-4000-pods created
+service "service-4000-pods" deleted
+Creating service 5000 at 03:44:48
+service/service-5000-pods created
+service "service-5000-pods" deleted
+Creating service 6000 at 03:45:19
+service/service-6000-pods created
+service "service-6000-pods" deleted
+Creating service 7000 at 03:45:53
+service/service-7000-pods created
+service "service-7000-pods" deleted
+service "load-1000-pods" deleted
+Load=5000 at 03:46:27
+service/load-5000-pods created
+endpoints/load-5000-pods created
+Creating service 1000 at 03:46:31
+service/service-1000-pods created
+service "service-1000-pods" deleted
+Creating service 2000 at 03:47:02
+service/service-2000-pods created
+service "service-2000-pods" deleted
+Creating service 3000 at 03:47:25
+service/service-3000-pods created
+service "service-3000-pods" deleted
+Creating service 4000 at 03:47:48
+service/service-4000-pods created
+service "service-4000-pods" deleted
+Creating service 5000 at 03:48:11
+service/service-5000-pods created
+service "service-5000-pods" deleted
+Creating service 6000 at 03:48:34
+service/service-6000-pods created
+service "service-6000-pods" deleted
+Creating service 7000 at 03:48:57
+service/service-7000-pods created
+service "service-7000-pods" deleted
+service "load-5000-pods" deleted
+Load=10000 at 03:49:31
+service/load-10000-pods created
+endpoints/load-10000-pods created
+Creating service 1000 at 03:49:35
+service/service-1000-pods created
+service "service-1000-pods" deleted
+Creating service 2000 at 03:50:06
+service/service-2000-pods created
+service "service-2000-pods" deleted
+Creating service 3000 at 03:50:30
+service/service-3000-pods created
+service "service-3000-pods" deleted
+Creating service 4000 at 03:51:04
+service/service-4000-pods created
+service "service-4000-pods" deleted
+Creating service 5000 at 03:51:28
+service/service-5000-pods created
+service "service-5000-pods" deleted
+Creating service 6000 at 03:51:51
+service/service-6000-pods created
+service "service-6000-pods" deleted
+Creating service 7000 at 03:52:15
+service/service-7000-pods created
+service "service-7000-pods" deleted
+service "load-10000-pods" deleted
+Load=20000 at 03:52:49
+service/load-20000-pods created
+endpoints/load-20000-pods created
+Creating service 1000 at 03:52:53
+service/service-1000-pods created
+service "service-1000-pods" deleted
+Creating service 2000 at 03:53:26
+service/service-2000-pods created
+service "service-2000-pods" deleted
+Creating service 3000 at 03:53:58
+service/service-3000-pods created
+service "service-3000-pods" deleted
+Creating service 4000 at 03:54:27
+service/service-4000-pods created
+service "service-4000-pods" deleted
+Creating service 5000 at 03:54:52
+service/service-5000-pods created
+service "service-5000-pods" deleted
+Creating service 6000 at 03:55:17
+service/service-6000-pods created
+service "service-6000-pods" deleted
+Creating service 7000 at 03:55:42
+service/service-7000-pods created
+service "service-7000-pods" deleted
+service "load-20000-pods" deleted
+Load=30000 at 03:56:17
+service/load-30000-pods created
+endpoints/load-30000-pods created
+Creating service 1000 at 03:56:23
+service/service-1000-pods created
+service "service-1000-pods" deleted
+Creating service 2000 at 03:56:56
+service/service-2000-pods created
+service "service-2000-pods" deleted
+Creating service 3000 at 03:57:29
+service/service-3000-pods created
+service "service-3000-pods" deleted
+Creating service 4000 at 03:57:58
+service/service-4000-pods created
+service "service-4000-pods" deleted
+Creating service 5000 at 03:58:26
+service/service-5000-pods created
+service "service-5000-pods" deleted
+Creating service 6000 at 03:58:56
+service/service-6000-pods created
+service "service-6000-pods" deleted
+Creating service 7000 at 03:59:22
+service/service-7000-pods created
+service "service-7000-pods" deleted
+service "load-30000-pods" deleted

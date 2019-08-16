@@ -1,0 +1,78 @@
+cilium_agent_api_process_time_seconds              method="GET" path="/v1/healthz" return_code="200"                                               0.079064
+cilium_agent_api_process_time_seconds              method="GET" path="/v1/metrics" return_code="200"                                               9.985734
+cilium_agent_bootstrap_seconds                     scope="bpfBase" outcome="success"                                                               10.547259
+cilium_agent_bootstrap_seconds                     outcome="success" scope="cleanup"                                                               0.000423
+cilium_agent_bootstrap_seconds                     outcome="success" scope="clusterMeshInit"                                                       0.000128
+cilium_agent_bootstrap_seconds                     outcome="success" scope="daemonInit"                                                            0.000895
+cilium_agent_bootstrap_seconds                     outcome="success" scope="earlyInit"                                                             1.390262
+cilium_agent_bootstrap_seconds                     outcome="success" scope="enableConntrack"                                                       0.064324
+cilium_agent_bootstrap_seconds                     outcome="success" scope="fqdn"                                                                  0.001965
+cilium_agent_bootstrap_seconds                     outcome="success" scope="healthCheck"                                                           0.000287
+cilium_agent_bootstrap_seconds                     outcome="success" scope="initAPI"                                                               1.475805
+cilium_agent_bootstrap_seconds                     outcome="success" scope="ipam"                                                                  0.001966
+cilium_agent_bootstrap_seconds                     outcome="success" scope="k8sInit"                                                               1.950021
+cilium_agent_bootstrap_seconds                     outcome="success" scope="mapsInit"                                                              0.014784
+cilium_agent_bootstrap_seconds                     outcome="success" scope="overall"                                                               21.860067
+cilium_agent_bootstrap_seconds                     outcome="success" scope="proxyStart"                                                            0.000196
+cilium_agent_bootstrap_seconds                     outcome="success" scope="restore"                                                               6.187728
+cilium_agent_bootstrap_seconds                     outcome="success" scope="workloadsInit"                                                         0.014495
+cilium_bpf_syscall_duration_seconds                operation="create" outcome="success"                                                            0.011149
+cilium_bpf_syscall_duration_seconds                operation="delete" outcome="fail"                                                               0.000036
+cilium_bpf_syscall_duration_seconds                operation="delete" outcome="success"                                                            7.890928
+cilium_bpf_syscall_duration_seconds                operation="getNextKey" outcome="fail"                                                           0.021667
+cilium_bpf_syscall_duration_seconds                operation="getNextKey" outcome="success"                                                        3.094216
+cilium_bpf_syscall_duration_seconds                operation="lookup" outcome="fail"                                                               0.000071
+cilium_bpf_syscall_duration_seconds                operation="lookup" outcome="success"                                                            0.728646
+cilium_bpf_syscall_duration_seconds                outcome="fail" operation="objGet"                                                               0.000107
+cilium_bpf_syscall_duration_seconds                operation="objGet" outcome="success"                                                            0.009419
+cilium_bpf_syscall_duration_seconds                operation="objPin" outcome="success"                                                            0.001137
+cilium_bpf_syscall_duration_seconds                operation="update" outcome="success"                                                            0.768853
+cilium_controllers_runs_duration_seconds           status="success"                                                                                1439.838281
+cilium_datapath_conntrack_gc_duration_seconds      family="ipv4" protocol="TCP" status="completed"                                                 0.042846
+cilium_datapath_conntrack_gc_duration_seconds      family="ipv4" protocol="non-TCP" status="completed"                                             0.305026
+cilium_endpoint_regeneration_time_stats_seconds    scope="bpfCompilation" status="success"                                                         2.985383
+cilium_endpoint_regeneration_time_stats_seconds    scope="bpfLoadProg" status="success"                                                            3.024463
+cilium_endpoint_regeneration_time_stats_seconds    scope="bpfWaitForELF" status="success"                                                          5.743770
+cilium_endpoint_regeneration_time_stats_seconds    scope="bpfWriteELF" status="success"                                                            0.000908
+cilium_endpoint_regeneration_time_stats_seconds    scope="buildDuration" status="success"                                                          88.444822
+cilium_endpoint_regeneration_time_stats_seconds    status="success" scope="mapSync"                                                                0.007523
+cilium_endpoint_regeneration_time_stats_seconds    scope="policyCalculation" status="success"                                                      0.003611
+cilium_endpoint_regeneration_time_stats_seconds    scope="prepareBuild" status="success"                                                           0.242595
+cilium_endpoint_regeneration_time_stats_seconds    scope="proxyConfiguration" status="success"                                                     0.002737
+cilium_endpoint_regeneration_time_stats_seconds    scope="proxyPolicyCalculation" status="success"                                                 0.002879
+cilium_endpoint_regeneration_time_stats_seconds    status="success" scope="proxyWaitForAck"                                                        0.003101
+cilium_endpoint_regeneration_time_stats_seconds    scope="waitingForCTClean" status="success"                                                      0.174812
+cilium_endpoint_regeneration_time_stats_seconds    scope="waitingForLock" status="success"                                                         78.881746
+cilium_k8s_client_api_latency_time_seconds         method="DELETE" path="/apis/cilium.io/v2/namespaces/{namespace}/ciliumendpoints/{name}"         0.061509
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/api/v1/componentstatuses/{name}"                                            0.020817
+cilium_k8s_client_api_latency_time_seconds         path="/api/v1/endpoints" method="GET"                                                           0.035694
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/api/v1/namespaces"                                                          0.004888
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/api/v1/namespaces/{namespace}/pods/{name}"                                  0.006897
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/api/v1/nodes"                                                               0.059873
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/api/v1/nodes/{name}"                                                        0.002712
+cilium_k8s_client_api_latency_time_seconds         path="/api/v1/pods" method="GET"                                                                0.024898
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/api/v1/services"                                                            0.016307
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/apis/apiextensions.k8s.io/v1beta1/customresourcedefinitions/{name}"         0.076108
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/apis/cilium.io/v2/ciliumnetworkpolicies"                                    0.017585
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/apis/networking.k8s.io/v1/networkpolicies"                                  0.011135
+cilium_k8s_client_api_latency_time_seconds         method="GET" path="/version"                                                                    0.272793
+cilium_k8s_client_api_latency_time_seconds         method="PATCH" path="/api/v1/nodes/{name}"                                                      0.012181
+cilium_k8s_client_api_latency_time_seconds         method="PATCH" path="/api/v1/nodes/{name}/status"                                               0.014067
+cilium_k8s_client_api_latency_time_seconds         method="PATCH" path="/apis/cilium.io/v2/namespaces/{namespace}/ciliumendpoints/{name}/status"   0.121873
+cilium_k8s_client_api_latency_time_seconds         method="POST" path="/apis/cilium.io/v2/namespaces/{namespace}/ciliumendpoints"                  0.318602
+cilium_k8s_client_api_latency_time_seconds         method="PUT" path="/apis/apiextensions.k8s.io/v1beta1/customresourcedefinitions/{name}"         0.008099
+cilium_kvstore_events_queue_seconds                action="create" scope="ip/v1"                                                                   0.000010
+cilium_kvstore_events_queue_seconds                action="create" scope="nodes/v1"                                                                0.000003
+cilium_kvstore_events_queue_seconds                action="modify" scope="ip/v1"                                                                   0.000012
+cilium_kvstore_events_queue_seconds                action="modify" scope="nodes/v1"                                                                0.000002
+cilium_kvstore_operations_duration_seconds         action="DeletePrefix" kind="delete" outcome="success" scope="cilium-net/o"                      0.138874
+cilium_kvstore_operations_duration_seconds         kind="read" outcome="success" scope="ip/v1" action="Get"                                        37.645970
+cilium_kvstore_operations_duration_seconds         action="Get" kind="read" outcome="success" scope="nodes/v1"                                     0.331848
+cilium_kvstore_operations_duration_seconds         action="Update" kind="set" outcome="success" scope="ip/v1"                                      1.078848
+cilium_kvstore_operations_duration_seconds         action="Update" kind="set" outcome="success" scope="nodes/v1"                                   0.004713
+cilium_policy_regeneration_time_stats_seconds      status="success" scope="buildDuration"                                                          0.001131
+cilium_policy_regeneration_time_stats_seconds      scope="policyCalculation" status="success"                                                      0.000277
+cilium_policy_regeneration_time_stats_seconds      scope="waitingForIdentityCache" status="success"                                                0.000477
+cilium_policy_regeneration_time_stats_seconds      status="success" scope="waitingForPolicyRepository"                                             0.000008
+cilium_process_cpu_seconds_total                                                                                                                   18.850000
+cilium_process_start_time_seconds                                                                                                                  1565753525.550000

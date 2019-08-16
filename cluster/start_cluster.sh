@@ -7,6 +7,6 @@ export KUBE_GCE_ZONE=us-central1-b
 export NODE_SIZE=n1-standard-32
 export MASTER_SIZE=n1-standard-16
 export MASTER_DISK_SIZE=200
-export NETWORK_PROVIDER=cni
+#export NETWORK_PROVIDER=cni
 
 ./kube-up.sh
