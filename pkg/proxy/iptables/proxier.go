@@ -665,10 +665,10 @@ func (proxier *Proxier) appendServiceCommentLocked(args []string, svcName string
 // The only other iptables rules are those that are setup in iptablesInit()
 // This assumes proxier.mu is NOT held
 func (proxier *Proxier) syncProxyRules() {
+	start := time.Now()
 	proxier.mu.Lock()
 	defer proxier.mu.Unlock()
 
-	start := time.Now()
 	defer func() {
 		metrics.SyncProxyRulesLatency.Observe(metrics.SinceInSeconds(start))
 		metrics.DeprecatedSyncProxyRulesLatency.Observe(metrics.SinceInMicroseconds(start))
