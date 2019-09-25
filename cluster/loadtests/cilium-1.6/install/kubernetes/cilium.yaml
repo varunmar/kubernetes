@@ -498,7 +498,7 @@ spec:
         name: bpf-maps
       # To install cilium cni plugin in the host
       - hostPath:
-          path:  /home/kubernetes/bin
+          path:  /opt/cni/bin
           type: DirectoryOrCreate
         name: cni-path
         # To install cilium cni configuration in the host
@@ -628,9 +628,8 @@ spec:
                 ip link del cbr0
               fi
               # GKE: Alter the kubelet configuration to run in CNI mode
-              echo "Changing kubelet configuration to --network-plugin=cni --cni-bin-dir=/home/kubernetes/bin"
-              mkdir -p /home/kubernetes/bin
-              sed -i "s:--network-plugin=kubenet:--network-plugin=cni\ --cni-bin-dir=/home/kubernetes/bin:g" /etc/default/kubelet
+              echo "Changing kubelet configuration to --network-plugin=cni --cni-bin-dir=/opt/cni/bin"
+              sed -i "s:--network-plugin=kubenet:--network-plugin=cni\ --cni-bin-dir=/opt/cni/bin:g" /etc/default/kubelet
               echo "Restarting kubelet..."
               systemctl restart kubelet
               date > /tmp/cilium-bootstrap-time
