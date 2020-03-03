@@ -1,0 +1,65 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress
+  annotations:
+    policyLogging: true
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+
+
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-all-egress
+  annotations:
+    policyLogging: false
+spec:
+  podSelector: {}
+  egress:
+  - {}
+  policyTypes:
+  - Egress
+
+
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: test-network-policy
+  namespace: default
+  annotations:
+    policyLogging: true
+spec:
+  podSelector:
+    matchLabels:
+      type: pci-pod
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          role: frontend
+
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: log-all-pci-drops
+  namespace: default
+  annotations:
+    policyLogging: true
+spec:
+  podSelector:
+    matchLabels:
+      type: pci-pod
+  policyTypes:
+  - Ingress
+
+
