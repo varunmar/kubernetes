@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: grpc-client
 spec:
+  priorityClassName: system-node-critical
   containers:
   - name: grpc-client
     command: ["sh", "-c"]
